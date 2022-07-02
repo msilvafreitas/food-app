@@ -4,28 +4,146 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Food App</title>
 </head>
 <body>
-    <div class="grid">
-        <div class="item">
-          <div class="item-content">
-            <!-- Safe zone, enter your custom markup -->
-            TEste
-            <!-- Safe zone ends -->
-          </div>
-        </div>
-      
-        <div class="item">
-          <div class="item-content">
-            <!-- Safe zone, enter your custom markup -->
-            <div class="my-custom-content">
-              AAA
-            </div>
-            <!-- Safe zone ends -->
-          </div>
-        </div>
-      </div>
+  <h1>FoodApp </h1>
+  <h2>Filtro:</h2>
+  <div id="filters" class="button-group">  <button class="button is-checked" data-filter="*">show all</button>
+    <button class="button" data-filter=".brasileira">brasileira</button>
+    <button class="button" data-filter=".americana">americana</button>
+    <button class="button" data-filter=".italiana">italiana</button>
+    <button class="button" data-filter=".japonesa">japonesa</button>
+    <button class="button" data-filter=".mexicana">mexicana</button>
+    <button class="button" data-filter=".tailandesa">tailandesa</button>
+    <button class="button" data-filter="numberGreaterThan4">nota maior que 4</button>
     
+  </div>
+  
+  <h2>Classificar por:</h2>
+  <div id="sorts" class="button-group">  <button class="button is-checked" data-sort-by="original-order">original order</button>
+    <button class="button" data-sort-by="nome">nome</button>
+    <button class="button" data-sort-by="comida">comida</button>
+    <button class="button" data-sort-by="avaliacao">avaliação</button>
+    <button class="button" data-sort-by="preco">preço</button>
+    <button class="button" data-sort-by="category">entrega</button>
+  </div>
+  
+  <div class="grid">
+    <div class="element-item japonesa " data-category="transition">
+      <h3 class="nome">Restaurante Oshiro</h3>
+      <p class="comida">Japonesa</p>
+      <p class="avaliacao">4.2</p>
+      <p class="preco">$$$$</p>
+    </div>
+    <div class="element-item  italiana " data-category="metalloid">
+      <h3 class="nome">Pasta Sicilia</h3>
+      <p class="comida">Italiana</p>
+      <p class="avaliacao">4.3</p>
+      <p class="preco">$$$$</p>
+    </div>
+    <div class="element-item inglesa " data-category="post-transition">
+      <h3 class="nome">Bristol Breakfast</h3>
+      <p class="comida">Inglesa</p>
+      <p class="avaliacao">4.1</p>
+      <p class="preco">$$$</p>
+    </div>
+    <div class="element-item irlandesa " data-category="post-transition">
+      <h3 class="nome">O'Connel Pub</h3>
+      <p class="comida">Irlandesa</p>
+      <p class="avaliacao">4.5</p>
+      <p class="preco">$$$</p>
+    </div>
+    <div class="element-item brasileira " data-category="transition">
+      <h3 class="nome">Sabor Caseiro</h3>
+      <p class="comida">Brasileira</p>
+      <p class="avaliacao">4.4</p>
+      <p class="preco">$$$</p>
+    </div>
+    <div class="element-item mexicana " data-category="alkali">
+      <h3 class="nome">Pacha Tacos</h3>
+      <p class="comida">Mexicana</p>
+      <p class="avaliacao">4.2</p>
+      <p class="preco">$$$$</p>
+    </div>
+    <div class="element-item irlandesa " data-category="alkali">
+      <h3 class="nome">Sweeneys Bar</h3>
+      <p class="comida">Irlandesa</p>
+      <p class="avaliacao">4.6</p>
+      <p class="preco">$$$$</p>
+    </div>
+    <div class="element-item indiana " data-category="transition">
+      <h3 class="nome">Bangalore Bicycle Club</h3>
+      <p class="comida">Indiana</p>
+      <p class="avaliacao">4.3</p>
+      <p class="preco">$$$</p>
+    </div>
+    <div class="element-item argentina " data-category="alkaline-earth">
+      <h3 class="nome">Cordoba Chorizos</h3>
+      <p class="comida">Argentina</p>
+      <p class="avaliacao">4.1</p>
+      <p class="preco">$$$$</p>
+    </div>
+    <div class="element-item americana " data-category="transition">
+      <h3 class="nome">Rob Burger</h3>
+      <p class="comida">Americana</p>
+      <p class="avaliacao">3.6</p>
+      <p class="preco">$$</p>
+    </div>
+    <div class="element-item tailandesa " data-category="post-transition">
+      <h3 class="nome">Thai Ki</h3>
+      <p class="comida">Tailandesa</p>
+      <p class="avaliacao">4.4</p>
+      <p class="preco">$$$</p>
+    </div>
+    <div class="element-item brasileira " data-category="metalloid">
+      <h3 class="nome">Brasa Capixaba</h3>
+      <p class="comida">Brasileira</p>
+      <p class="avaliacao">4.1</p>
+      <p class="preco">$$$</p>
+    </div>
+    <div class="element-item brasileira " data-category="transition">
+      <h3 class="nome">Tempero Baiano</h3>
+      <p class="comida">Brasileira</p>
+      <p class="avaliacao">4.6</p>
+      <p class="preco">$$$</p>
+    </div>
+    <div class="element-item irlandesa " data-category="lanthanoid">
+      <h3 class="nome">Fibber's</h3>
+      <p class="comida">Irlandesa</p>
+      <p class="avaliacao">4.8</p>
+      <p class="preco">$$$$</p>
+    </div>
+    <div class="element-item inglesa " data-category="noble-gas">
+      <h3 class="nome">The King's Table</h3>
+      <p class="comida">Inglesa</p>
+      <p class="avaliacao">4.1</p>
+      <p class="preco">$$$$$</p>
+    </div>
+    <div class="element-item italiana " data-category="diatomic">
+      <h3 class="nome">Famiglia Belotti</h3>
+      <p class="comida">Italiana</p>
+      <p class="avaliacao">4.3</p>
+      <p class="preco">$$$$</p>
+    </div>
+    <div class="element-item americana " data-category="actinoid">
+      <h3 class="nome">Baltimore Fries</h3>
+      <p class="comida">Americana</p>
+      <p class="avaliacao">4.0</p>
+      <p class="preco">$$$</p>
+    </div>
+    <div class="element-item italiana " data-category="actinoid">
+      <h3 class="nome">Cocina di Roma</h3>
+      <p class="comida">Italiana</p>
+      <p class="avaliacao">4.4</p>
+      <p class="preco">$$$$</p>
+    </div>
+  </div>
+  
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+      <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+      <script src="isotope.pkgd.min.js"></script>
+      <script src="script.js"></script>
 </body>
 </html>
