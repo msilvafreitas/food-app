@@ -21,10 +21,7 @@ var $grid = $('.grid').isotope({
       comida: '.comida',
       avaliacao: '.avaliacao parseFloat',
       entrega: '[data-category]',
-      preco: function( itemElem ) {
-        var preco = $( itemElem ).find('.preco').text();
-        return parseFloat( preco.replace( /[\(\)]/g, '') );
-      }
+      preco: '.preco'
     }
   });
   
@@ -33,7 +30,7 @@ var $grid = $('.grid').isotope({
     // show if number is greater than 50
     numberGreaterThan4: function() {
       var avaliacao = $(this).find('.avaliacao').text();
-      return parseInt( avaliacao, 1 ) > 4.0;
+      return parseFloat( avaliacao, 0.1 ) > 4;
     },
     
   };
@@ -49,8 +46,10 @@ var $grid = $('.grid').isotope({
   // bind sort button click
   $('#sorts').on( 'click', 'button', function() {
     var sortByValue = $(this).attr('data-sort-by');
-    $grid.isotope({ sortBy: sortByValue });
+    if(sortByValue == 'avaliacao'){ $grid.isotope({ sortBy: sortByValue, sortAscending: false })  }
+    else { $grid.isotope({ sortBy: sortByValue, sortAscending: true })};
   });
+  
   
   // change is-checked class on buttons
   $('.button-group').each( function( i, buttonGroup ) {

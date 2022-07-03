@@ -93,7 +93,7 @@ body {
   padding: 0;
 }
 
-.element-item .name {
+.element-item  {
   position: absolute;
 
   left: 10px;
@@ -115,22 +115,28 @@ body {
 
 .element-item .avaliacao {
   position: absolute;
+  font-size: 14px;
+  font-weight: bold;
   right: 8px;
   top: 5px;
+}
+
+.element-item .avaliacao:after {
+  content: '★';
 }
 
 .element-item .preco {
   position: absolute;
   left: 10px;
   top: 76px;
-  font-size: 12px;
-  font-weight: bold;
-  color: rgb(255, 255, 255);
+  font-size: 16px;
+  font-weight: bold;  
+  color: rgb(153, 255, 179);
 }
 
 .element-item.italiana          { background: #aa0000; background: #aa0000; color: white; }
 .element-item.indiana  { background: #F80; background: hsl(  36, 100%, 50%); }
-.element-item.brasileira      { background: #ffee00; background: #ffee00; }
+.element-item.brasileira      { background: #ffee00; background: #ffd900; }
 .element-item.mexicana       { background: #0f7c0f; background: #0f7c0f; color: white; }
 .element-item.irlandesa      { background: #00b35f; background: #00b35f; }
 .element-item.argentina { background: #66aeff; background: #66aeff; }
