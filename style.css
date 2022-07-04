@@ -1,7 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Bahiana&family=Montserrat&display=swap');
+
+
 * { box-sizing: border-box; }
 
 body {
-  font-family: sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #F9E4D4;
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #9C0F48;
+  color: #f39451;
+  padding: 1rem;
+  font-family: 'Bahiana', cursive;
+  border-radius: 40px;
+  border-color: #D67D3E;
+  border-style: solid;
+  margin: 1rem;
+}
+
+h2 {
+  margin-left: 1rem;
+  font-size: medium;
+  color: #9C0F48;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* ---- button ---- */
@@ -9,26 +34,25 @@ body {
 .button {
   display: inline-block;
   padding: 0.5em 1.0em;
-  background: #EEE;
-  border: none;
-  border-radius: 7px;
-  background-image: linear-gradient( to bottom, hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, 0.2) );
-  color: #222;
-  font-family: sans-serif;
+  background: #F9E4D4;
+  border: 1px solid #9C0F48;
+  
+  /*background-image: linear-gradient( to bottom, hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, 0.2) );*/
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   text-shadow: 0 1px white;
   cursor: pointer;
 }
 
 .button:hover {
-  background-color: #8CF;
-  text-shadow: 0 1px hsla(0, 0%, 100%, 0.5);
-  color: #222;
+  background-color: #9C0F48;
+  text-shadow: 0 1px #D67D3E;
+  color: rgb(255, 255, 255);
 }
 
 .button:active,
 .button.is-checked {
-  background-color: #28F;
+  background-color: #D67D3E;
 }
 
 .button.is-checked {
@@ -37,7 +61,7 @@ body {
 }
 
 .button:active {
-  box-shadow: inset 0 1px 10px hsla(0, 0%, 0%, 0.8);
+  box-shadow: inset 0 1px 10px #9C0F48;
 }
 
 /* ---- button-group ---- */
@@ -54,18 +78,18 @@ body {
 
 .button-group .button {
   float: left;
-  border-radius: 0;
-  margin-left: 0;
-  margin-right: 1px;
+  border-radius: 1rem;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
-.button-group .button:first-child { border-radius: 0.5em 0 0 0.5em; }
-.button-group .button:last-child { border-radius: 0 0.5em 0.5em 0; }
+/*.button-group .button:first-child { border-radius: 0.5em 0.5em; }
+.button-group .button:last-child { border-radius: 0.5em 0.5em; }*/
 
 /* ---- isotope ---- */
 
 .grid {
-  border: 1px solid #333;
+  border: none;
 }
 
 /* clear fix */
@@ -79,13 +103,14 @@ body {
 
 .element-item {
   position: relative;
-  float: left;
+  float: center;
   width: 250px;
   height: 150px;
   margin: 15px;
   padding: 10px;
-  background: #888;
+  background: rgb(255, 255, 255);
   color: #262524;
+  cursor: pointer;
 }
 
 .element-item > * {
@@ -95,22 +120,33 @@ body {
 
 .element-item  {
   position: absolute;
-
+  border-radius: 15px;
   left: 10px;
   top: 60px;
   text-transform: none;
   letter-spacing: 0;
   font-size: 12px;
   font-weight: normal;
+  border-style: solid;
+  border-color: #D67D3E;
 }
 
-.element-item .symbol {
+
+.element-item .name {
+  font-family: 'Bahiana', cursive;
+  font-size: 32px;
+  color: #9C0F48;
+}
+
+.element-item .foto {
   position: absolute;
-  left: 10px;
-  top: 0px;
-  font-size: 42px;
-  font-weight: bold;
-  color: white;
+  width: 120px;
+  height: 80px;
+  border-radius: 40px;
+  background-image: url('https://images.pexels.com/photos/2098085/pexels-photo-2098085.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  right: 50px;
+  background-position: center;
+  
 }
 
 .element-item .avaliacao {
@@ -118,7 +154,8 @@ body {
   font-size: 14px;
   font-weight: bold;
   right: 8px;
-  top: 5px;
+  bottom: 5px;
+  color: #D67D3E;
 }
 
 .element-item .avaliacao:after {
@@ -129,11 +166,12 @@ body {
   position: absolute;
   left: 10px;
   top: 76px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;  
-  color: rgb(153, 255, 179);
+  color: rgb(16, 170, 55);
+  
 }
-
+/*
 .element-item.italiana          { background: #aa0000; background: #aa0000; color: white; }
 .element-item.indiana  { background: #F80; background: hsl(  36, 100%, 50%); }
 .element-item.brasileira      { background: #ffee00; background: #ffd900; }
@@ -143,4 +181,4 @@ body {
 .element-item.inglesa       { background: #175e9c; background: #175e9c; color: white; }
 .element-item.americana        { background: #1a1ab9; background: #1a1ab9; color: white; }
 .element-item.tailandesa         { background: #e62881; background: #e62881; }
-.element-item.japonesa       { background: #F08; background: hsl( 324, 100%, 50%); }
+.element-item.japonesa       { background: #F08; background: hsl( 324, 100%, 50%); } */
