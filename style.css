@@ -22,6 +22,15 @@ h1 {
   margin: 1rem;
 }
 
+#carouselExampleCaptions {
+  margin-bottom: 1rem;
+}
+
+#carouselExampleCaptions .carousel-inner .foto {
+  height: 40vh;
+  object-fit: cover;  
+}
+
 h2 {
   margin-left: 1rem;
   font-size: medium;
@@ -99,6 +108,10 @@ h2 {
   clear: both;
 }
 
+body .restaurants {
+  display: flex; 
+  justify-content: center;
+}
 /* ---- .element-item ---- */
 
 .element-item {
@@ -138,7 +151,7 @@ h2 {
   color: #9C0F48;
 }
 
-.element-item .foto {
+/*.element-item .foto {
   position: absolute;
   width: 120px;
   height: 80px;
@@ -147,7 +160,7 @@ h2 {
   right: 50px;
   background-position: center;
   
-}
+}*/
 
 .element-item .avaliacao {
   position: absolute;
@@ -171,6 +184,21 @@ h2 {
   color: rgb(16, 170, 55);
   
 }
+
+.rodape {
+  background-color: #9C0F48;
+  border-radius: 15px;
+  color: #f39451;
+}
+
+.nav-link {
+  color: white;
+}
+
+.github {
+  color: white;
+}
+
 /*
 .element-item.italiana          { background: #aa0000; background: #aa0000; color: white; }
 .element-item.indiana  { background: #F80; background: hsl(  36, 100%, 50%); }
