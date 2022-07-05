@@ -38,13 +38,23 @@ h2 {
   font-family: 'Montserrat', sans-serif;
 }
 
+.h5 {
+  font-weight: bold;
+}
+
 /* ---- button ---- */
+
+.fundo--branco {
+  background-color: white;
+  padding: 1rem;
+  
+}
 
 .button {
   display: inline-block;
   padding: 0.5em 1.0em;
   background: #F9E4D4;
-  border: 1px solid #9C0F48;
+  border: solid #9C0F48;
   
   /*background-image: linear-gradient( to bottom, hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, 0.2) );*/
   font-family: 'Montserrat', sans-serif;
@@ -77,12 +87,14 @@ h2 {
 
 .button-group {
   margin-bottom: 20px;
+  
 }
 
 .button-group:after {
   content: '';
   display: block;
   clear: both;
+  
 }
 
 .button-group .button {
@@ -90,6 +102,7 @@ h2 {
   border-radius: 1rem;
   margin-left: 5px;
   margin-right: 5px;
+  margin-bottom: 5px;
 }
 
 /*.button-group .button:first-child { border-radius: 0.5em 0.5em; }
@@ -114,6 +127,8 @@ body .restaurants {
 }
 /* ---- .element-item ---- */
 
+
+
 .element-item {
   position: relative;
   float: center;
@@ -124,6 +139,14 @@ body .restaurants {
   background: rgb(255, 255, 255);
   color: #262524;
   cursor: pointer;
+}
+
+@media (max-width: 559px) {
+  .element-item {
+    width: calc(100% - 30px);
+
+  }
+
 }
 
 .element-item > * {
