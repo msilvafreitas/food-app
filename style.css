@@ -112,6 +112,7 @@ h2 {
 
 .grid {
   border: none;
+  
 }
 
 /* clear fix */
@@ -121,9 +122,11 @@ h2 {
   clear: both;
 }
 
-body .restaurants {
-  display: flex; 
-  justify-content: center;
+
+
+.centralizar {
+  margin: auto;
+  width: 90%;
 }
 /* ---- .element-item ---- */
 

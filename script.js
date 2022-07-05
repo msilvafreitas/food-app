@@ -3,6 +3,7 @@ var elem = document.querySelector('.grid');
 var iso = new Isotope( elem, {
   // options
   itemSelector: '.grid-item',
+  
   layoutMode: 'fitRows'
 });
 
@@ -20,7 +21,6 @@ var $grid = $('.grid').isotope({
       name: '.name',
       comida: '.comida',
       avaliacao: '.avaliacao parseFloat',
-      entrega: '[data-category]',
       preco: '.preco'
     }
   });
